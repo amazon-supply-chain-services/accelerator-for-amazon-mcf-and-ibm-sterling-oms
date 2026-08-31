@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  OMS response fixture — getShipmentContainerList output, EMPTY (no existing container).
+  Sanitized capture of a real IBM Sterling OMS response. When zero records are returned, the
+  shipment processor treats the shipment as new and proceeds to confirm it (create the container).
+-->
+<Containers TotalNumberOfRecords="0"/>

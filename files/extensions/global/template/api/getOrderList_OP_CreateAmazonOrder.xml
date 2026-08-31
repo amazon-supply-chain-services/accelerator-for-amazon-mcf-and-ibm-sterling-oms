@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<OrderList>
+	<Order CustomerEMailID="" CustomerFirstName="" CustomerLastName="" DocumentType="" EnterpriseCode="" EntryType="" MaxOrderStatus="" MaxOrderStatusDesc="" MinOrderStatus="" MinOrderStatusDesc="" OrderDate="" OrderHeaderKey="" OrderNo="" OrderType="" OverallStatus="" PaymentStatus="" SellerOrganizationCode="" Status="">
+		<Extn ExtnOrderCountry=""/>
+		<PriceInfo Currency=""/>
+		<OrderLines TotalNumberOfRecords="">
+			<OrderLine MaxLineStatus="" MaxLineStatusDesc="" MinLineStatus="" MinLineStatusDesc="" Qty="" OrderHeaderKey="" OrderLineKey="" OrderedQty="" OriginalOrderedQty="" PrimeLineNo="" RemainingQty="" ShipNode="" Status="" StatusQuantity="" SubLineNo="" FulfillmentType="">
+				<Item ItemDesc="" ItemID="" ItemShortDesc="" ProductClass="" ProductLine=" " UnitCost="" UnitOfMeasure=""/>
+				<LinePriceInfo LineTotal="" UnitPrice=""/>
+				<LineOverallTotals Charges="" Discount="" ExtendedPrice="" LineTotal="" OptionPrice="" PricingQty="" Tax="" UnitPrice=""/>
+				<LineCharges/>
+				<LineTaxes>
+					<LineTax ChargeCategory="" ChargeName=" " Reference1=" " Reference2=" " Reference3=" " RemainingTax="" Tax="" TaxName="" TaxPercentage="">
+                </LineTax>
+				</LineTaxes>
+				<OrderStatuses>
+					<OrderStatus OrderHeaderKey="" OrderLineKey="" OrderLineScheduleKey="" OrderReleaseKey="" OrderReleaseStatusKey="" PipelineKey="" Status="" StatusDate="" StatusDescription="" StatusQty="" TotalQuantity="" ShipNode=""/>
+				</OrderStatuses>
+				<Extn ExtnAmazonDeliveryOfferId="" ExtnAmazonDelPreviewId="" ExtnAmazonLineItemAlias="" ExtnAmazonOrderId="" ExtnAmazonReturnEligible="" ExtnIsAmazonFulfillable="" ExtnIsPrimeEligible="" ExtnlwaAccessToken=""/>
+				<LineOverallTotals Charges="" Discount="" ExtendedPrice="" LineCost="" LineTotal="" LineTotalWithoutTax="" ManualDiscountPercentage="" ManualOverridePercentage="" OptionPrice="" PercentProfitMargin="" PricingQty="" ShippingBaseCharge="" ShippingCharges="" ShippingDiscount="" ShippingTotal="" Tax="" UnitPrice=""/>
+				<PersonInfoShipTo AddressLine1="" AddressLine2="" City="" Country="" EMailID="" FirstName="" LastName="" MiddleName="" MobilePhone="" State="" ZipCode=""/>
+				<Schedules>
+					<Schedule ExpectedDeliveryDate="" ExpectedShipmentDate="" OrderHeaderKey="" OrderLineKey="" OrderLineScheduleKey="" ProcureFromNode="" ProductAvailabilityDate="" Quantity="" ReceivingNode=""  ScheduleNo="" ShipByDate="" ShipNode="" >
+					</Schedule>
+				</Schedules>
+			</OrderLine>
+		</OrderLines>
+		<PersonInfoShipTo AddressLine1="" AddressLine2="" City="" Country="" EMailID="" FirstName="" LastName="" MiddleName="" MobilePhone="" State="" ZipCode=""/>
+		<OverallTotals GrandCharges="" GrandDiscount="" GrandTax="" GrandTotal="" HdrCharges="" HdrDiscount="" HdrTax="" HdrTotal="" LineSubTotal=""/>
+		<HeaderCharges>
+			<HeaderCharge ChargeAmount="" ChargeCategory="" ChargeName=" " ChargeNameKey="" InvoicedChargeAmount="" IsBillable="" IsDiscount="" Reference=" " RemainingChargeAmount=""/>
+		</HeaderCharges>
+		<OrderStatuses>
+			<OrderStatus OrderHeaderKey="" OrderLineKey="" OrderLineScheduleKey="" OrderReleaseKey="" OrderReleaseStatusKey="" PipelineKey="" Status="" StatusDate="" StatusDescription="" StatusQty="" TotalQuantity="" ShipNode=""/>
+		</OrderStatuses>
+	</Order>
+</OrderList>
+

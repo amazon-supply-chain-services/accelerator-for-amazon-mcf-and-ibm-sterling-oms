@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  OMS response fixture — getOrderLineList output for the RECONCILIATION flow.
+  Same structure as getOrderLineList_output.xml, but the ExtnAmazonLineItemAlias matches the
+  lineItemId in samples/listorders_from_amazon_2026-07-04.json so the reconciliation chain can
+  resolve the OMS order line for the snapshot's shipment. Sanitized real capture; sample IDs.
+-->
+<OrderLineList LastOrderLineKey="OL0001" LastRecordSet="Y" ReadFromHistory="" TotalLineList="1">
+    <OrderLine FulfillmentType="Amazon MCF" OrderLineKey="OL0001" OrderedQty="2.00"
+        PrimeLineNo="1" ShipNode="AMZ-US" SubLineNo="1">
+        <Order DocumentType="0001" EnterpriseCode="DEFAULT" OrderHeaderKey="OH0001"
+            OrderNo="Y100003115" SellerOrganizationCode="DEFAULT">
+            <Extn ExtnOrderCountry="US"/>
+            <OrderLines>
+                <OrderLine FulfillmentType="Amazon MCF" MaxLineStatus="3200" MinLineStatus="3200"
+                    OrderHeaderKey="OH0001" OrderLineKey="OL0001" OrderedQty="2.00"
+                    PrimeLineNo="1" ShipNode="AMZ-US" Status="Released" SubLineNo="1">
+                    <Extn ExtnAmazonLineItemAlias="202603151549159158697"
+                        ExtnIsAmazonFulfillable="Y" ExtnIsPrimeEligible="N"/>
+                    <Item ItemID="Deep_bwp_MCF_6"/>
+                </OrderLine>
+            </OrderLines>
+        </Order>
+        <OrderStatuses>
+            <OrderStatus OrderLineKey="OL0001" OrderReleaseKey="OR0001" ShipNode="AMZ-US"
+                Status="3200" StatusDescription="Released" StatusQty="2.00"/>
+        </OrderStatuses>
+    </OrderLine>
+</OrderLineList>

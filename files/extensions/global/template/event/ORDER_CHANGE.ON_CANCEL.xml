@@ -1,0 +1,67 @@
+<Order AutoCancelDate="" BillToID="" BuyerOrganizationCode="" CustomerRewardsNo="" DocumentType="" EnterpriseCode="" OrderHeaderKey="" OrderNo="" SellerOrganizationCode="" TeamCode="">
+	<OrderLines>
+		<!-- ChangeInOrderedQty is returned with sign. In case of this event it should always come with negative sign.  -->
+		<OrderLine ChangeInOrderedQty="" OrderLineKey="" OrderedQty="" PrimeLineNo="" SubLineNo="">
+			<Extn />
+			<Item ItemID="" ProductClass="" UnitOfMeasure=""/>
+			<!-- ChangeInLineTotal is returned with sign.  -->
+			<LinePriceInfo ChangeInLineTotal="" LineTotal="" TaxExemptionCertificate="" TaxableFlag=""/>
+			<StatusBreakupForCanceledQty>
+				<CanceledFrom OrderLineScheduleKey="" OrderReleaseKey="" OrderReleaseStatusKey="" Quantity="" Status="" StatusDate="" StatusDescription="">
+					<Details ExpectedDeliveryDate="" ExpectedShipmentDate="" ReceivingNode="" ShipByDate="" ShipNode="" TagNumber=""/>
+				</CanceledFrom>
+			</StatusBreakupForCanceledQty>
+		</OrderLine>
+	</OrderLines>
+	<PriceInfo ChangeInTotalAmount="" Currency="" EnterpriseCurrency="" ReportingConversionDate="" ReportingConversionRate="" TotalAmount=""/>
+	<OrderAudit AuditTransactionId="" CreateUserName="" Createts="" Createuserid="" ModifyUserName="" Modifyts="" Modifyuserid="" NewBuffer="" OldBuffer="" OrderAuditKey="" OrderHeaderKey="" OrderLineKey="" OrderReleaseKey="" ReasonCode="" ReasonText="" Reference1="" Reference2="" Reference3="" Reference4="" XMLFlag="">
+		<Order DocumentType="" EnterpriseCode="" OrderNo=""/>
+		<OrderAuditLevels>
+			<OrderAuditLevel ModificationLevel="" ModificationLevelScreenName="" OrderLineKey="" OrderReleaseKey="">
+				<OrderLine OrderLineKey="" OrderedQty="" PrimeLineNo="" SubLineNo="">
+					<Item AlternateItemID="" BundleFulfillmentMode="" CostCurrency="" CountryOfOrigin="" CustomerItem="" CustomerItemDesc="" ECCNNo="" HarmonizedCode="" ISBN="" ItemDesc="" ItemID="" ItemShortDesc="" ItemWeight="" ItemWeightUOM="" ManufacturerItem="" ManufacturerItemDesc="" ManufacturerName="" NMFCClass="" NMFCCode="" NMFCDescription="" ProductClass="" ProductLine="" ScheduleBCode="" SubstituteItemID="" SubstituteItemUOM="" SupplierItem="" SupplierItemDesc="" TaxProductCode="" UPCCode="" UnitCost="" UnitOfMeasure="">
+						<LanguageDescriptionList>
+							<LanguageDescription Description="" LocaleCode=""/>
+						</LanguageDescriptionList>
+					</Item>
+				</OrderLine>
+				<OrderRelease ReleaseNo=""/>
+				<OrderAuditDetails>
+					<OrderAuditDetail Action="" AuditType="">
+						<IDs>
+							<!--  ID is not a template-driven element. If the template contains OrderAuditDetail element, this element will come based on AuditType. For AuditTypes like Order, OrderLine this element does not come. -->
+							<ID Name="Required" Value="Required"/>
+						</IDs>
+						<Attributes>
+							<!--  Attribute is not a template-driven element. If the template contains OrderAuditDetail element, this element will appear in the output xml alongwith all its attributes. -->
+							<Attribute Extended="N" ModificationType="" Name="Required" NewValue="Required" OldValue="Required"/>
+						</Attributes>
+						<!--  CustomAuditDetails is not a template-driven element. If custom entity is modified, this element will appear in the output xml .  -->
+						<!--  Nested CustomAuditDetails element will be returned if custom table has a hangoff table.  -->
+						<CustomAuditDetails>
+							<OrderAuditDetail Action="" AuditType="">
+								<IDs>
+									<!--  ID is not a template-driven element. If the template contains OrderAuditDetail element, this element will come based on AuditType. For AuditTypes like Order, OrderLine this element does not come. -->
+									<ID Name="Required" Value="Required"/>
+								</IDs>
+								<Attributes>
+									<!--  Attribute is not a template-driven element. If the template contains OrderAuditDetail element, this element will appear in the output xml alongwith all its attributes. -->
+									<Attribute Extended="N" ModificationType="" Name="Required" NewValue="Required" OldValue="Required"/>
+								</Attributes>
+							</OrderAuditDetail>
+						</CustomAuditDetails>
+					</OrderAuditDetail>
+				</OrderAuditDetails>
+				<ModificationTypes>
+					<ModificationType Name="" ScreenName=""/>
+				</ModificationTypes>
+			</OrderAuditLevel>
+		</OrderAuditLevels>
+	</OrderAudit>
+	<AddedAwards TotalNumberOfRecords="">
+		<Award AwardAmount="" AwardApplied="" AwardId="" AwardKey="" AwardType="" ChargeCategory="" ChargeName="" DenialReason="" Description="" IsPromotionOnOrder="" PosReasonCode="" PromotionId="" PromotionKey=""/>
+	</AddedAwards>
+	<RemovedAwards TotalNumberOfRecords="">
+		<Award AwardAmount="" AwardApplied="" AwardId="" AwardKey="" AwardType="" ChargeCategory="" ChargeName="" DenialReason="" Description="" IsPromotionOnOrder="" PosReasonCode="" PromotionId="" PromotionKey=""/>
+	</RemovedAwards>
+</Order>

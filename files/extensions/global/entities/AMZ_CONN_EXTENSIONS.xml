@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Licensed Materials - Property of IBM
+IBM Sterling Selling and Fulfillment Suite
+(C) Copyright IBM Corp. 1001, 2013 All Rights Reserved.
+US Government Users Restricted Rights - Use, duplication or disclosure restricted by GSA ADP Schedule Contract with IBM Corp.
+-->
+<DBSchema>
+	<Entities>
+		<Entity TableName="YFS_ORDER_HEADER">
+			<Attributes>
+				<Attribute ColumnName="EXTN_ORDER_COUNTRY" DataType="Text-100" Type="NVARCHAR" Description="Attribute to identify Geo for Order" Size="100" XMLName="ExtnOrderCountry" XMLGroup="Extn" Nullable="true"/>
+				<!-- <Attribute ColumnName="EXTN_AMCCONN_EVENTS" DataType="CLOB" DefaultValue="" Nullable="true" XMLName="ExtnAmzConnEvents" XMLGroup="Extn"/> -->
+				<Attribute ColumnName="EXTN_AMAZON_RETURN_ORDER_ID" DataType="Text-100" Type="NVARCHAR" Description="Amazon Return Order Id" Size="100" XMLName="ExtnAmazonReturnOrderId" XMLGroup="Extn" Nullable="true"/>
+			</Attributes>
+			<Indices>
+				<Index Name="EXTN_AMZ_RETURNORDERID_INDX" AllowCompressedColumns="false">
+					<Column Name="EXTN_AMAZON_RETURN_ORDER_ID"/>
+				</Index>
+			</Indices>
+		</Entity>
+		<Entity TableName="YFS_ORDER_LINE">
+			<Attributes>
+				<Attribute ColumnName="EXTN_AMAZON_ORDER_ID" DataType="Text-100" Description="Amazon Order ID for the Line" Nullable="true" Size="100" Type="NVARCHAR" XMLName="ExtnAmazonOrderId" XMLGroup="Extn"/>
+				<Attribute ColumnName="EXTN_AMAZON_LINE_ITEM_ALIAS" DataType="Text-100" Description="Amazon Line ID" XMLName="ExtnAmazonLineItemAlias" Size="100" Type="NVARCHAR" XMLGroup="Extn" Nullable="true"/>
+				<Attribute ColumnName="EXTN_IS_AMAZON_FULFILLABLE" DataType="Flag" Type="NCHAR" Description="Y for all BwP Lines and MCF Lines sent to Amazon" Size="1" XMLName="ExtnIsAmazonFulfillable" XMLGroup="Extn" Nullable="true"/>
+				<Attribute ColumnName="EXTN_IS_PRIME_ELIGIBLE" DataType="Flag" Type="NCHAR" Description="Y for all BwP Lines and N for MCF Lines sent to Amazon" Size="1" XMLName="ExtnIsPrimeEligible" XMLGroup="Extn" Nullable="true"/>
+				<Attribute ColumnName="EXTN_AMAZON_DEL_PREVIEW_ID" DataType="Text-100" Type="NVARCHAR" Description="Amazon delivery preview ID" Size="100" XMLName="ExtnAmazonDelPreviewId" XMLGroup="Extn" Nullable="true"/>
+				<Attribute ColumnName="EXTN_AMAZON_DELIVERY_OFFER_ID" DataType="Text-100" Type="NVARCHAR" Description="Amazon delivery offer ID" Size="100" XMLName="ExtnAmazonDeliveryOfferId" XMLGroup="Extn" Nullable="true"/>
+				<Attribute ColumnName="EXTN_AMAZON_RETURN_ELIGIBLE" DataType="Flag" Type="NCHAR" Description="Amazon return eligible" Size="1" XMLName="ExtnAmazonReturnEligible" XMLGroup="Extn" Nullable="true"/>
+				<Attribute ColumnName="EXTN_LWA_ACCESS_TOKEN" DataType="Text-130" Type="NVARCHAR" Description="Shopper identity LWA access token" Size="130" XMLName="ExtnlwaAccessToken" XMLGroup="Extn" Nullable="true"/>
+				<Attribute ColumnName="EXTN_AMAZON_CANCEL_REQ_BY" DataType="Text-40" Type="NVARCHAR" Description="Details about the Cancellation requester" Size="40" XMLName="ExtnAmzConnCancelnRequestedBy" XMLGroup="Extn" Nullable="true"/>
+				<Attribute ColumnName="EXTN_AMAZON_CANCEL_STATUS" DataType="Text-40" Type="NVARCHAR" Description="Represents the state of Cancellation" Size="40" XMLName="ExtnAmzConnCancelStatus" XMLGroup="Extn" Nullable="true"/>
+				<Attribute ColumnName="EXTN_AMAZON_CANCELLATIONID" DataType="Text-150" Type="NVARCHAR" Description="Amazon Generated Unique identifier associated with cancellation" Size="150" XMLName="ExtnAmzConnCancellationID" XMLGroup="Extn" Nullable="true"/>
+				<!--DROP3 Extension Start here-->
+				<Attribute ColumnName="EXTN_IS_AMAZON_INIT_RETURN" DataType="Flag" Type="NCHAR" Description="Flag to Identify Amazon Initiated Return" Size="1" XMLName="ExtnIsAmazonInitReturn" XMLGroup="Extn" Nullable="true" DefaultValue="N"/>
+				<Attribute ColumnName="EXTN_AMAZON_SO_LINE_ITEM_ALIAS" DataType="Text-100" Description="Derived from Sales Line Item Alias" XMLName="ExtnAmazonSoLineItemAlias" Size="100" Type="NVARCHAR" XMLGroup="Extn" Nullable="true"/>
+				<Attribute ColumnName="EXTN_AMAZON_RETURN_ORDER_ID" DataType="Text-100" Type="NVARCHAR" Description="Amazon Return Order Id" Size="100" XMLName="ExtnAmazonReturnOrderId" XMLGroup="Extn" Nullable="true"/>
+				<!--DROP3 Extension End here-->
+				<Attribute ColumnName="EXTN_AMAZON_CANCEL_CREATETS" DataType="TimeStamp" Description="Amazon cancellation requested create TimeStamp" XMLName="ExtnAmzConnCancelCreateTS" Nullable="true" XMLGroup="Extn"/>
+				<Attribute ColumnName="EXTN_AMAZON_CANCEL_UPDATETS" DataType="TimeStamp" Description="Amazon cancellation requested updated TimeStamp" XMLName="ExtnAmzConnCancelUpdateTS" Nullable="true" XMLGroup="Extn"/>
+			</Attributes>
+			<Indices>
+				<Index Name="EXTN_AMZ_LINEITEMALIAS_INDX1" AllowCompressedColumns="false">
+					<Column Name="EXTN_AMAZON_LINE_ITEM_ALIAS"/>
+				</Index>
+				<!--DROP3 Index Start here-->
+				<Index Name="EXTN_AMZ_SOLNEITMALIAS_INDX1" AllowCompressedColumns="false">
+					<Column Name="EXTN_AMAZON_SO_LINE_ITEM_ALIAS"/>
+				</Index>
+				<Index Name="EXTN_AMZ_RETURNORDERID_INDX1" AllowCompressedColumns="false">
+					<Column Name="EXTN_AMAZON_RETURN_ORDER_ID"/>
+				</Index>
+				<Index Name="EXTN_AMAZON_ORDER_ID_INDX1" AllowCompressedColumns="false">
+					<Column Name="EXTN_AMAZON_ORDER_ID"/>
+				</Index>
+				<!--DROP3 Index End here-->
+			</Indices>
+		</Entity>
+		<Entity TableName="YFS_ORDER_RELEASE">
+			<Attributes>
+				<Attribute ColumnName="EXTN_AMZ_ORDER_ID" DataType="Text-100" Description="Amazon Order ID for the Line" Nullable="true" Size="100" Type="NVARCHAR" XMLName="ExtnAmazonOrderId" XMLGroup="Extn"/>
+			</Attributes>
+		</Entity>
+		<Entity TableName="YFS_SHIPMENT_CONTAINER">
+			<Attributes>
+				<Attribute ColumnName="EXTN_AMAZON_DELIVERY_ID" DataType="Text-100" Description="Amazon delivery ID for the container" Nullable="true" Size="100" Type="NVARCHAR" XMLName="ExtnAmazonDeliveryId" XMLGroup="Extn"/>
+				<Attribute ColumnName="EXTN_AMAZON_TRACKING_URL" DataType="Text-250" Description="Amazon tracking url for the container." Nullable="true" Size="250" Type="NVARCHAR" XMLName="ExtnAmazonTrackingURL" XMLGroup="Extn"/>
+				<Attribute ColumnName="EXTN_CARRIER_CODE" DataType="Text-100" Description="Amazon carrier code for the container." Nullable="true" Size="100" Type="NVARCHAR" XMLName="ExtnCarrierCode" XMLGroup="Extn"/>
+			</Attributes>
+			<Indices>
+				<Index Name="EXTN_AMZ_DELIVERY_ID_INDX1" AllowCompressedColumns="false">
+					<Column Name="EXTN_AMAZON_DELIVERY_ID"/>
+				</Index>
+				<Index Name="TRACKING_NO_INDX2">
+					<Column Name="TRACKING_NO"/>
+				</Index>
+			</Indices>
+		</Entity>
+
+		<Entity TableName="YFS_SHIPMENT">
+			<Indices>
+				<Index Name="TRACKING_NO_INDX1">
+					<Column Name="TRACKING_NO"/>
+				</Index>
+			</Indices>
+		</Entity>
+		<!-- DROP3- TABLE EXTENSION Start here -->
+		<Entity TableName="YFS_ORDER_INVOICE">
+			<Attributes>
+				<Attribute ColumnName="EXTN_AMAZON_REFUND_ID" DataType="Text-200" Type="NVARCHAR" Description="Attribute to Set Refund id for amazon order" Size="200" XMLName="ExtnAmazonRefundId" XMLGroup="Extn" Nullable="true"/>
+				<Attribute ColumnName="EXTN_AMAZON_ORDER_ID" DataType="Text-100" Description="Amazon Order ID for the Line" Nullable="true" Size="100" Type="NVARCHAR" XMLName="ExtnAmazonOrderId" XMLGroup="Extn"/>
+			</Attributes>
+			<Indices>
+				<Index Name="EXTN_AMAZONREFUNDID_INDX1" AllowCompressedColumns="false">
+					<Column Name="EXTN_AMAZON_REFUND_ID"/>
+				</Index>
+			</Indices>
+		</Entity>
+		<Entity TableName="YFS_RECEIPT_LINE">
+			<Attributes>
+				<Attribute ColumnName="EXTN_AMAZON_REFUND_ID" DataType="Text-200" Type="NVARCHAR" Description="Attribute to Set Refund id for amazon order" Size="200" XMLName="ExtnAmazonRefundId" XMLGroup="Extn" Nullable="true"/>
+				<Attribute ColumnName="EXTN_AMAZON_ORDER_ID" DataType="Text-100" Description="Amazon Order ID for the Line" Nullable="true" Size="100" Type="NVARCHAR" XMLName="ExtnAmazonOrderId" XMLGroup="Extn"/>
+				<Attribute ColumnName="EXTN_AMAZON_RETURN_ORDER_ID" DataType="Text-100" Type="NVARCHAR" Description="Amazon Return Order Id" Size="100" XMLName="ExtnAmazonReturnOrderId" XMLGroup="Extn" Nullable="true"/>
+			</Attributes>
+			<Indices>
+				<Index Name="EXTN_AMAZONREFUNDID_INDX2" AllowCompressedColumns="false">
+					<Column Name="EXTN_AMAZON_REFUND_ID"/>
+				</Index>
+				<Index Name="EXTN_AMAZONRETRUNID_INDX2" AllowCompressedColumns="false">
+					<Column Name="EXTN_AMAZON_RETURN_ORDER_ID"/>
+				</Index>
+			</Indices>
+		</Entity>
+		<!-- DROP3- TABLE EXTENSION END here -->
+	</Entities>
+</DBSchema>

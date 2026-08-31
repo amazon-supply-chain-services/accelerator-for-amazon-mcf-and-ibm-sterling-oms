@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!-- 
+Licensed Materials - Property of IBM
+IBM Sterling Selling And Fulfillment Suite
+(C) Copyright IBM Corp. 2005, 2013 All Rights Reserved.
+US Government Users Restricted Rights - Use, duplication or disclosure restricted by GSA ADP Schedule Contract with IBM Corp.
+ -->
+<!-- PAYMENT_COLLECTION.ON_INVOICE_CREATION event XML-->
+<Order DocumentType="" EnterpriseCode="" OrderDate="" OrderHeaderKey=""  OrderNo="" OrderType="" SellerOrganizationCode="">
+	<InvoiceCollections>
+		<InvoiceCollection AmountCollected="" OrderInvoiceKey="" ChargeTransactionKey="">
+			<OrderInvoice Currency ="" AmountCollected="" ChargeTransactionKey=""  DateInvoiced="" DerivedFromOrderHeaderKey="" InvoiceNo="" InvoiceType="" OrderHeaderKey="" OrderInvoiceKey="" Reference1="" ReturnReleaseKey="" ShipmentKey="" Status="" TotalAmount="" TotalTax="">
+			<Extn/>
+			</OrderInvoice>
+		</InvoiceCollection>
+	</InvoiceCollections>
+</Order>

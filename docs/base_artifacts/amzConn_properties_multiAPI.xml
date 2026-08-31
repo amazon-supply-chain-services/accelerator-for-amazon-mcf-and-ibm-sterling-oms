@@ -1,0 +1,198 @@
+<MultiApi>
+    <API Name="manageProperty">
+        <Input>
+            <Property PropertyOverride="BASE" Category="yfs"  PropertyValue="AMZ.CONN.INV.FULL.SYNC.AGENT.Q" BasePropertyName="amzConn.fullsync.agentqueue">
+                <PropertyMetadata BasePropertyName="amzConn.fullsync.agentqueue" Category="yfs" Description="amzConn.fullsync.agentqueue" JvmType="APPSERVER" Modifiable="Y" ModifiableAtRuntime="Y" PropertyType="CUSTOM" Scope="GLOBAL" ServerOverride="N" UserOverride="N"/>
+            </Property>
+        </Input><Template/>
+    </API>
+    <API Name="manageProperty">
+        <Input>
+            <Property PropertyOverride="BASE" Category="yfs"  PropertyValue="BWP_MG_QCF" BasePropertyName="amzConn.AGENT_QCF">
+                <PropertyMetadata BasePropertyName="amzConn.AGENT_QCF" Category="yfs" Description="amzConn.AGENT_QCF" JvmType="APPSERVER" Modifiable="Y" ModifiableAtRuntime="Y" PropertyType="CUSTOM" Scope="GLOBAL" ServerOverride="N" UserOverride="N"/>
+            </Property>
+        </Input><Template/>
+    </API>
+    <API Name="manageProperty">
+        <Input>
+            <Property PropertyOverride="BASE" Category="yfs"  PropertyValue="file:/opt/ssfs/" BasePropertyName="amzConn.PROVIDER_URL">
+                <PropertyMetadata BasePropertyName="amzConn.PROVIDER_URL" Category="yfs" Description="amzConn.PROVIDER_URL" JvmType="APPSERVER" Modifiable="Y" ModifiableAtRuntime="Y" PropertyType="CUSTOM" Scope="GLOBAL" ServerOverride="N" UserOverride="N"/>
+            </Property>
+        </Input><Template/>
+    </API>
+    <API Name="manageProperty">
+        <Input>
+            <Property PropertyOverride="BASE" Category="yfs"  PropertyValue="AMZ.CONN.INV.INB.Q" BasePropertyName="amzConn.inv.inb.q">
+                <PropertyMetadata BasePropertyName="amzConn.inv.inb.q" Category="yfs" DataType="String" JvmType="APPSERVER" Modifiable="Y" ModifiableAtRuntime="Y" PropertyType="CUSTOM" Scope="GLOBAL" ServerOverride="N" UserOverride="N"/>
+            </Property>
+        </Input><Template/>
+    </API>
+    <API Name="manageProperty">
+        <Input>
+            <Property PropertyOverride="BASE" Category="yfs"  PropertyValue="AMZ.CONN.ORDER.INT.Q" BasePropertyName="amzConn.order.integqueue">
+                <PropertyMetadata BasePropertyName="amzConn.order.integqueue" Category="yfs" DataType="String" JvmType="APPSERVER" Modifiable="Y" ModifiableAtRuntime="Y" PropertyType="CUSTOM" Scope="GLOBAL" ServerOverride="N" UserOverride="N"/>
+            </Property>
+        </Input><Template/>
+    </API>
+    <API Name="manageProperty">
+        <Input>
+            <Property PropertyOverride="BASE" Category="yfs"  PropertyValue="AMZ.CONN.FULFILLMENT.SYNC.Q" BasePropertyName="amzConn.fulfillment.integqueue">
+                <PropertyMetadata BasePropertyName="amzConn.fulfillment.integqueue" Category="yfs" DataType="String" JvmType="APPSERVER" Modifiable="Y" ModifiableAtRuntime="Y" PropertyType="CUSTOM" Scope="GLOBAL" ServerOverride="N" UserOverride="N"/>
+            </Property>
+        </Input><Template/>
+    </API>
+    <API Name="manageProperty">
+        <Input>
+            <Property PropertyOverride="BASE" Category="yfs"  PropertyValue="AMZ.CONN.TRACKING.MILESTONE.Q" BasePropertyName="amzConn.milestones.integqueue">
+                <PropertyMetadata BasePropertyName="amzConn.milestones.integqueue" Category="yfs" DataType="String" JvmType="APPSERVER" Modifiable="Y" ModifiableAtRuntime="Y" PropertyType="CUSTOM" Scope="GLOBAL" ServerOverride="N" UserOverride="N"/>
+            </Property>
+        </Input><Template/>
+    </API>
+    <API Name="manageProperty">
+        <Input>
+            <Property PropertyOverride="BASE" Category="yfs"  PropertyValue="AMZ.CONN.TRACKING.PURGE.AGENT.Q" BasePropertyName="amzConn.milestones.purge.agentqueue">
+                <PropertyMetadata BasePropertyName="amzConn.milestones.purge.agentqueue" Category="yfs" DataType="String" JvmType="APPSERVER" Modifiable="Y" ModifiableAtRuntime="Y" PropertyType="CUSTOM" Scope="GLOBAL" ServerOverride="N" UserOverride="N"/>
+            </Property>
+        </Input><Template/>
+    </API>
+    <API Name="manageProperty">
+        <Input>
+            <Property PropertyOverride="BASE" Category="yfs"  PropertyValue="client-439dc14p4p4wvvugmn0pp9rm4" BasePropertyName="amzConn.bwp_api_client_id.DEFAULT">
+                <PropertyMetadata BasePropertyName="amzConn.bwp_api_client_id.DEFAULT" Category="yfs" DataType="String" JvmType="APPSERVER" Modifiable="Y" ModifiableAtRuntime="Y" PropertyType="CUSTOM" Scope="GLOBAL" ServerOverride="N" UserOverride="N"/>
+            </Property>
+        </Input><Template/>
+    </API>
+    <API Name="manageProperty">
+        <Input>
+            <Property PropertyOverride="BASE" Category="yfs"  PropertyValue="<YOUR_BWP_API_CLIENT_SECRET>" BasePropertyName="amzConn.bwp_api_client_secret.DEFAULT">
+                <PropertyMetadata BasePropertyName="amzConn.bwp_api_client_secret.DEFAULT" Category="yfs" DataType="String" JvmType="APPSERVER" Modifiable="Y" ModifiableAtRuntime="Y" PropertyType="CUSTOM" Scope="GLOBAL" ServerOverride="N" UserOverride="N"/>
+            </Property>
+        </Input><Template/>
+    </API>
+    <API Name="manageProperty">
+        <Input>
+            <Property PropertyOverride="BASE" Category="yfs"  PropertyValue="https://api.buywithprime.amazon.com/token" BasePropertyName="amzConn.bwp_api_oauth_url.DEFAULT">
+                <PropertyMetadata BasePropertyName="amzConn.bwp_api_oauth_url.DEFAULT" Category="yfs" DataType="String" JvmType="APPSERVER" Modifiable="Y" ModifiableAtRuntime="Y" PropertyType="CUSTOM" Scope="GLOBAL" ServerOverride="N" UserOverride="N"/>
+            </Property>
+        </Input><Template/>
+    </API>
+    <API Name="manageProperty">
+        <Input>
+            <Property PropertyOverride="BASE" Category="yfs"  PropertyValue="client_credentials" BasePropertyName="amzConn.bwp_api_grant_type.DEFAULT">
+                <PropertyMetadata BasePropertyName="amzConn.bwp_api_grant_type.DEFAULT" Category="yfs" DataType="String" JvmType="APPSERVER" Modifiable="Y" ModifiableAtRuntime="Y" PropertyType="CUSTOM" Scope="GLOBAL" ServerOverride="N" UserOverride="N"/>
+            </Property>
+        </Input><Template/>
+    </API>
+    <API Name="manageProperty">
+        <Input>
+            <Property PropertyOverride="BASE" Category="yfs"  PropertyValue="10"  BasePropertyName="amzConn.api_time_out.DEFAULT">
+                <PropertyMetadata BasePropertyName="amzConn.api_time_out.DEFAULT" Category="yfs" DataType="String" JvmType="APPSERVER" Modifiable="Y" ModifiableAtRuntime="Y" PropertyType="CUSTOM" Scope="GLOBAL" ServerOverride="N" UserOverride="N"/>
+            </Property>
+        </Input><Template/>
+    </API>
+    <API Name="manageProperty">
+        <Input>
+            <Property PropertyOverride="BASE" Category="yfs"  PropertyValue="<YOUR_BWP_API_TARGET_ID>" BasePropertyName="amzConn.bwp_api_target_id.DEFAULT">
+                <PropertyMetadata BasePropertyName="amzConn.bwp_api_target_id.DEFAULT" Category="yfs" DataType="String" JvmType="APPSERVER" Modifiable="Y" ModifiableAtRuntime="Y" PropertyType="CUSTOM" Scope="GLOBAL" ServerOverride="N" UserOverride="N"/>
+            </Property>
+        </Input><Template/>
+    </API>
+    <API Name="manageProperty">
+        <Input>
+            <Property PropertyOverride="BASE" Category="yfs"  PropertyValue="<YOUR_BWP_API_ACCESS_KEY>" BasePropertyName="amzConn.bwp_api_access_key.DEFAULT">
+                <PropertyMetadata BasePropertyName="amzConn.bwp_api_access_key.DEFAULT" Category="yfs" DataType="String" JvmType="APPSERVER" Modifiable="Y" ModifiableAtRuntime="Y" PropertyType="CUSTOM" Scope="GLOBAL" ServerOverride="N" UserOverride="N"/>
+            </Property>
+        </Input><Template/>
+    </API>
+    <API Name="manageProperty">
+        <Input>
+            <Property PropertyOverride="BASE" Category="yfs"  PropertyValue="2024-11-01" BasePropertyName="amzConn.bwp_api_version.DEFAULT">
+                <PropertyMetadata BasePropertyName="amzConn.bwp_api_version.DEFAULT" Category="yfs" DataType="String" JvmType="APPSERVER" Modifiable="Y" ModifiableAtRuntime="Y" PropertyType="CUSTOM" Scope="GLOBAL" ServerOverride="N" UserOverride="N"/>
+            </Property>
+        </Input><Template/>
+    </API>
+    <API Name="manageProperty">
+        <Input>
+            <Property PropertyOverride="BASE" Category="yfs"  PropertyValue="https://api.buywithprime.amazon.com/graphql" BasePropertyName="amzConn.bwp_api_post_url.DEFAULT" >
+                <PropertyMetadata BasePropertyName="amzConn.bwp_api_post_url.DEFAULT" Category="yfs" DataType="String" JvmType="APPSERVER" Modifiable="Y" ModifiableAtRuntime="Y" PropertyType="CUSTOM" Scope="GLOBAL" ServerOverride="N" UserOverride="N"/>
+            </Property>
+        </Input><Template/>
+    </API>
+    <API Name="manageProperty">
+        <Input>
+            <Property PropertyOverride="BASE" Category="yfs"  PropertyValue="https://api.amazon.com/auth/o2/token" BasePropertyName="amzConn.sp_api_oauth_url.DEFAULT">
+                <PropertyMetadata BasePropertyName="amzConn.sp_api_oauth_url.DEFAULT" Category="yfs" DataType="String" JvmType="APPSERVER" Modifiable="Y" ModifiableAtRuntime="Y" PropertyType="CUSTOM" Scope="GLOBAL" ServerOverride="N" UserOverride="N"/>
+            </Property>
+        </Input><Template/>
+    </API>
+    <API Name="manageProperty">
+        <Input>
+            <Property PropertyOverride="BASE" Category="yfs"  PropertyValue="<YOUR_SP_API_REFRESH_TOKEN>" BasePropertyName="amzConn.sp_api_refresh_token.DEFAULT">
+                <PropertyMetadata BasePropertyName="amzConn.sp_api_refresh_token.DEFAULT" Category="yfs" DataType="String" JvmType="APPSERVER" Modifiable="Y" ModifiableAtRuntime="Y" PropertyType="CUSTOM" Scope="GLOBAL" ServerOverride="N" UserOverride="N"/>
+            </Property>
+        </Input><Template/>
+    </API>
+    <API Name="manageProperty">
+        <Input>
+            <Property PropertyOverride="BASE" Category="yfs"  PropertyValue="<YOUR_API_CLIENT_ID>" BasePropertyName="amzConn.sp_api_client_id.DEFAULT">
+                <PropertyMetadata BasePropertyName="amzConn.sp_api_client_id.DEFAULT" Category="yfs" DataType="String" JvmType="APPSERVER" Modifiable="Y" ModifiableAtRuntime="Y" PropertyType="CUSTOM" Scope="GLOBAL" ServerOverride="N" UserOverride="N"/>
+            </Property>
+        </Input><Template/>
+    </API>
+    <API Name="manageProperty">
+        <Input>
+            <Property PropertyOverride="BASE" Category="yfs"  PropertyValue="<YOUR_SP_API_CLIENT_SECRET>" BasePropertyName="amzConn.sp_api_client_secret.DEFAULT">
+                <PropertyMetadata BasePropertyName="amzConn.sp_api_client_secret.DEFAULT" Category="yfs" DataType="String" JvmType="APPSERVER" Modifiable="Y" ModifiableAtRuntime="Y" PropertyType="CUSTOM" Scope="GLOBAL" ServerOverride="N" UserOverride="N"/>
+            </Property>
+        </Input><Template/>
+    </API>
+    <API Name="manageProperty">
+        <Input>
+            <Property PropertyOverride="BASE" Category="yfs"  PropertyValue="<YOUR_API_CLIENT_ID>" BasePropertyName="amzConn.sp_api_grant_type.DEFAULT">
+                <PropertyMetadata BasePropertyName="amzConn.sp_api_grant_type.DEFAULT" Category="yfs" DataType="String" JvmType="APPSERVER" Modifiable="Y" ModifiableAtRuntime="Y" PropertyType="CUSTOM" Scope="GLOBAL" ServerOverride="N" UserOverride="N"/>
+            </Property>
+        </Input><Template/>
+    </API>
+    <API Name="manageProperty">
+        <Input>
+            <Property PropertyOverride="BASE" Category="yfs"  PropertyValue="https://sandbox.sellingpartnerapi-na.amazon.com/fba/inventory/v1/summaries" BasePropertyName="amzConn.GetInventorySummaries.api_url.DEFAULT">
+                <PropertyMetadata BasePropertyName="amzConn.GetInventorySummaries.api_url.DEFAULT" Category="yfs" DataType="String" JvmType="APPSERVER" Modifiable="Y" ModifiableAtRuntime="Y" PropertyType="CUSTOM" Scope="GLOBAL" ServerOverride="N" UserOverride="N"/>
+            </Property>
+        </Input><Template/>
+    </API>
+    <API Name="manageProperty">
+        <Input>
+            <Property PropertyOverride="BASE" Category="yfs"  PropertyValue="https://api.buywithprime.amazon.com/graphql" BasePropertyName="amzConn.bwp_api_post_url.BRAND2">
+                <PropertyMetadata BasePropertyName="amzConn.bwp_api_post_url.BRAND2" Category="yfs" DataType="String" JvmType="APPSERVER" Modifiable="Y" ModifiableAtRuntime="Y" PropertyType="CUSTOM" Scope="GLOBAL" ServerOverride="N" UserOverride="N"/>
+            </Property>
+        </Input><Template/>
+    </API>
+    <API Name="manageProperty">
+        <Input>
+            <Property PropertyOverride="BASE" Category="yfs"  PropertyValue="AMZ.CONN.SYNC.EXT.RETURN.TO.AMZ.INT.Q" BasePropertyName="amzConn.sync.ext.return.integqueue">
+                <PropertyMetadata BasePropertyName="amzConn.sync.ext.return.integqueue" Category="yfs" DataType="String" JvmType="APPSERVER" Modifiable="Y" ModifiableAtRuntime="Y" PropertyType="CUSTOM" Scope="GLOBAL" ServerOverride="N" UserOverride="N"/>
+            </Property>
+        </Input><Template/>
+    </API>
+    <API Name="manageProperty">
+        <Input>
+            <Property PropertyOverride="BASE" Category="yfs"  PropertyValue="AMZ.CONN.RETURNS.SYNC.TO.OMS.INT.Q" BasePropertyName="amzConn.return.integqueue">
+                <PropertyMetadata BasePropertyName="amzConn.return.integqueue" Category="yfs" DataType="String" JvmType="APPSERVER" Modifiable="Y" ModifiableAtRuntime="Y" PropertyType="CUSTOM" Scope="GLOBAL" ServerOverride="N" UserOverride="N"/>
+            </Property>
+        </Input><Template/>
+    </API>
+    <API Name="manageProperty">
+        <Input>
+            <Property PropertyOverride="BASE" Category="yfs"  PropertyValue="AMZ.CONN.REFUND.REQ.TO.OMS.INT.Q" BasePropertyName="amzConn.refund.req.integqueue">
+                <PropertyMetadata BasePropertyName="amzConn.refund.req.integqueue" Category="yfs" DataType="String" JvmType="APPSERVER" Modifiable="Y" ModifiableAtRuntime="Y" PropertyType="CUSTOM" Scope="GLOBAL" ServerOverride="N" UserOverride="N"/>
+            </Property>
+        </Input><Template/>
+    </API>
+    <API Name="manageProperty">
+        <Input>
+            <Property PropertyOverride="BASE" Category="yfs"  PropertyValue="AMZ.CONN.SYNC.PRIME.REFUND.TO.AMZ.INT.Q" BasePropertyName="amzConn.sync.prime.refund.integqueue" >
+                <PropertyMetadata BasePropertyName="amzConn.sync.prime.refund.integqueue" Category="yfs" DataType="String" JvmType="APPSERVER" Modifiable="Y" ModifiableAtRuntime="Y" PropertyType="CUSTOM" Scope="GLOBAL" ServerOverride="N" UserOverride="N"/>
+            </Property>
+        </Input><Template/>
+    </API>
+</MultiApi>

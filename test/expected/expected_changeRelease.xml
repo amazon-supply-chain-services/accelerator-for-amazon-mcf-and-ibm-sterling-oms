@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Expected OMS changeRelease request document that AmzProcessMCFOrderStatusChangeEvent builds from
+  samples/recon_cancel_snapshot.json (reconciliation snapshot) + samples/oms/getOrderLineList_recon_output.xml (scripted
+  OMS response), with ship-node property amzConn.amazonShipNode.US = AMZ-US.
+
+  The OMS line is Released (MaxLineStatus 3200), so the connector cancels via changeRelease:
+  Override=Y, OrderHeaderKey/OrderReleaseKey from the OMS response, SelectMethod=WAIT, and one
+  OrderLine with Action=CANCEL and a negative ChangeInQuantity equal to the cancelled amount.
+
+  The deep cancel test compares the produced document to this reference semantically.
+-->
+<OrderRelease Override="Y" OrderHeaderKey="OH0001" OrderReleaseKey="OR0001" SelectMethod="WAIT">
+    <OrderLines>
+        <OrderLine OrderLineKey="OL0001" Action="CANCEL" ChangeInQuantity="-1.00" ShipNode="AMZ-US"/>
+    </OrderLines>
+</OrderRelease>

@@ -1,0 +1,9 @@
+<Shipments>
+	<Shipment OrderNo=""  ReleaseNo="" SellerOrganizationCode="" ShipNode=""  ShipmentKey="" ShipmentNo="" ShipmentType="" Status="">
+		<Containers>
+			<Container  ContainerNo="" TrackingNo="" ExternalReference1="">
+			<Extn ExtnAmazonTrackingUrl="" ExtnAmazonDeliveryId="" ExtnCarrierCode="" />
+			</Container>
+		</Containers>
+	</Shipment>
+</Shipments>

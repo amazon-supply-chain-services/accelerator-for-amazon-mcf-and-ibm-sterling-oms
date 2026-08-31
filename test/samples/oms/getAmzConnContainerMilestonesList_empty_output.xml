@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  OMS response fixture — AmzConnGetContainerMilestonesList output, EMPTY (no milestone recorded yet).
+  Used by the reconciliation milestone scenario: with no existing milestone for the package's
+  status, the reconciliation dedup determines a milestone is needed and the package-status
+  processor proceeds to record it. Sanitized shape; sample values.
+-->
+<AmzConnContainerMilestonesList TotalNumberOfRecords="0"/>

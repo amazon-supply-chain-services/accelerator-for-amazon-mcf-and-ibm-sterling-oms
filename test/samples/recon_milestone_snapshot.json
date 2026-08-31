@@ -1,0 +1,23 @@
+{
+  "_comment": "Reconciliation snapshot in the 2026-07-04 Fulfillment Outbound order shape (the create/list API version, which is live). Drives the reconciliation agent's MILESTONE branch: a delivered package with a tracking number and no cancelled quantity. With getShipmentContainerList scripted POPULATED (container already exists, so the shipment branch skips) and the milestone not yet recorded, the agent generates an INTERNAL package-status event (an internal representation used to invoke the processor) and the package processor reaches the milestone-list service. Sample (non-real) values.",
+  "orders": [
+    {
+      "orderId": "322-ZU58-6J6E5P",
+      "status": "PROCESSING",
+      "fulfillmentConfiguration": { "serviceLevel": { "serviceTiers": ["STANDARD"] }, "action": "SHIP", "policy": "FILL_ALL_AVAILABLE" },
+      "lineItems": [
+        { "lineItemId": "202603151549159158697", "amount": { "unit": "EACHES", "value": "2" }, "product": { "productIdentifier": { "amazonSku": "Deep_bwp_MCF_6" } }, "unfulfillableAmount": { "unit": "EACHES", "value": "0" }, "cancelledAmount": { "unit": "EACHES", "value": "0" } }
+      ],
+      "shipments": [
+        {
+          "amazonShipmentId": "SHIP001",
+          "status": "SHIPPED",
+          "amazonFacility": { "facilityId": "PHX3" },
+          "items": [ { "lineItemId": "202603151549159158697", "amount": { "unit": "EACHES", "value": "1" }, "productIdentifier": { "amazonSku": "Deep_bwp_MCF_6" } } ],
+          "packages": [ { "packageId": "PKG-abc123def456", "status": "DELIVERED", "tracking": { "carrier": { "carrierCode": "ups", "trackingNumber": "1Z999AA1" }, "amazon": { "trackingNumber": "TBA001" } } } ]
+        }
+      ]
+    }
+  ],
+  "pagination": { "nextToken": "" }
+}

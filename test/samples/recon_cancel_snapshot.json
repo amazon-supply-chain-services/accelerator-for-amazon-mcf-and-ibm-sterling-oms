@@ -1,0 +1,14 @@
+{
+  "_comment": "Reconciliation snapshot in the 2026-07-04 Fulfillment Outbound order shape (the create/list API version, which is live). Drives the reconciliation agent's CANCEL branch: a top-level line item with a cancelled quantity and no shipments. With getOrderLineList scripted as a Released line (cancelled delta > 0), the agent generates an INTERNAL order-status-changed event (an internal representation used to invoke the processor) and the cancel processor builds the OMS changeRelease request. Sample (non-real) values.",
+  "orders": [
+    {
+      "orderId": "322-ZU58-6J6E5P",
+      "status": "PROCESSING",
+      "fulfillmentConfiguration": { "serviceLevel": { "serviceTiers": ["STANDARD"] }, "action": "SHIP", "policy": "FILL_ALL_AVAILABLE" },
+      "lineItems": [
+        { "lineItemId": "202603151549159158697", "amount": { "unit": "EACHES", "value": "2" }, "product": { "productIdentifier": { "amazonSku": "Deep_bwp_MCF_6" } }, "unfulfillableAmount": { "unit": "EACHES", "value": "0" }, "cancelledAmount": { "unit": "EACHES", "value": "1" } }
+      ]
+    }
+  ],
+  "pagination": { "nextToken": "" }
+}

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  SELF-TEST FIXTURE (outbound) — Sterling OMS "ReleaseOrder" Order XML.
+  Input to the MCF create-order builder (MCFPrepareSPAPICreateFulfillmentOrderRequest).
+  Sample (non-real) values. Order Y100003111, release 1, one MCF-eligible line.
+-->
+<Order CreateOrder="Y" CustomerEMailID="jane.doe@example.com"
+    CustomerFirstName="Jane" CustomerLastName="Doe"
+    DocumentType="0001" EnterpriseCode="DEFAULT" EntryType="Web"
+    OrderHeaderKey="202603151549159158696" OrderNo="Y100003111"
+    OrderType="Sales" Status="Released" Transaction="ReleaseOrder">
+    <OrderLines TotalNumberOfRecords="1">
+        <OrderLine FulfillmentType="Amazon MCF"
+            OrderHeaderKey="202603151549159158696"
+            OrderLineKey="202603151549159158697" OrderedQty="1.00"
+            PrimeLineNo="1" ShipNode="AMZ-US" Status="Released" SubLineNo="1">
+            <Item ItemID="Deep_bwp_MCF_6" ItemShortDesc="Deep_bwp_MCF_6"
+                ProductClass="GOOD" UnitOfMeasure="EACH"/>
+            <LinePriceInfo LineTotal="100.00" UnitPrice="100.00"/>
+            <Extn ExtnIsAmazonFulfillable="Y" ExtnIsPrimeEligible="N"/>
+            <PersonInfoShipTo AddressLine1="123 Beacon St" AddressLine2=""
+                City="Boston" Country="US" EMailID="jane.doe@example.com"
+                FirstName="Jane" LastName="Doe" MiddleName="" MobilePhone=""
+                State="MA" ZipCode="02160"/>
+            <OrderStatuses>
+                <OrderStatus OrderHeaderKey="202603151549159158696"
+                    OrderLineKey="202603151549159158697"
+                    OrderReleaseKey="202603151550339159026"
+                    ShipNode="AMZ-US" Status="3200"
+                    StatusDescription="Released" StatusQty="1.00" TotalQuantity="1.00"/>
+            </OrderStatuses>
+        </OrderLine>
+    </OrderLines>
+    <Extn ExtnOrderCountry="US"/>
+    <PriceInfo Currency="USD"/>
+    <PersonInfoShipTo AddressLine1="123 Beacon St" AddressLine2=""
+        City="Boston" Country="US" EMailID="jane.doe@example.com"
+        FirstName="Jane" LastName="Doe" MiddleName="" MobilePhone=""
+        State="MA" ZipCode="02160"/>
+</Order>

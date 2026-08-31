@@ -1,0 +1,18 @@
+<OrderInvoiceDetailList TotalNumberOfRecords="">
+	<OrderInvoiceDetail Charges="" ExtendedPrice="" IsHistory="" LineTotal="" OrderInvoiceDetailKey="" OrderLineKey="" PricingQty="" Quantity="" ShippedQty="" Tax="" UnitPrice="" isHistory="">
+		<InvoiceHeader ActualFreightCharge="" AmountCollected="Required" ChargedActualFreight="" CollectedExternally="" CollectedThroughAR="" DateInvoiced="" InvoiceNo="" InvoiceType="" LineSubTotal="" MasterInvoiceNo="" OrderInvoiceKey="" Reference1="" TotalAmount="" TotalTax="">
+			<Extn/>
+			<Order DeliveryCode="" DocumentType="" EnterpriseCode="" EntryType="" OrderHeaderKey="" OrderNo="" SellerOrganizationCode="" TermsCode="">
+				<PriceInfo Currency=""/>
+			</Order>
+		</InvoiceHeader>
+		<OrderLine OrderLineKey="" PrimeLineNo="" SubLineNo="" LevelOfService="" LineType="" ReshipParentLineKey="" OrderHeaderKey="">
+			<PriceInfo Currency=""/>
+			<Extn/>
+			<Item ItemID="" ProductClass="" UnitOfMeasure="" UPCCode="" ItemDesc="">
+		
+			</Item>
+			<LinePriceInfo InvoicedPricingQty="" ListPrice="" OrderedPricingQty="" PricingUOM="" RetailPrice="" TaxExemptionCertificate="" TaxableFlag="" UnitPrice=""/>
+		</OrderLine>
+	</OrderInvoiceDetail>
+</OrderInvoiceDetailList>

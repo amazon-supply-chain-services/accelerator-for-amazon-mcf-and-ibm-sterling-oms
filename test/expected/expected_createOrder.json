@@ -1,0 +1,29 @@
+{
+  "_comment": "Expected SP-API 2026-07-04 createFulfillmentOrder body produced by the REAL MCFPrepareSPAPICreateFulfillmentOrderRequest from samples/order_from_sterling.xml with a null release key (offline path: no live getOrderReleaseList call, so orderId = base OrderNo without the -NN release suffix).",
+  "orderId": "Y100003111",
+  "displayableOrderId": "Y100003111",
+  "fulfillmentConfiguration": {
+    "serviceLevel": { "serviceTiers": ["STANDARD"] },
+    "action": "SHIP",
+    "policy": "FILL_ALL_AVAILABLE"
+  },
+  "destination": {
+    "deliveryAddress": {
+      "name": "Jane Doe",
+      "addressLine1": "123 Beacon St",
+      "city": "Boston",
+      "stateOrRegion": "MA",
+      "postalCode": "02160",
+      "countryCode": "US",
+      "email": "jane.doe@example.com"
+    }
+  },
+  "origin": { "countryCode": "US" },
+  "lineItems": [
+    {
+      "lineItemId": "202603151549159158697",
+      "product": { "productIdentifier": { "amazonSku": "Deep_bwp_MCF_6" } },
+      "amount": { "unit": "EACHES", "value": "1.00" }
+    }
+  ]
+}

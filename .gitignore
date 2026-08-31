@@ -1,0 +1,23 @@
+# Package build output
+/build
+
+### macOS ###
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+
+### Windows ###
+Thumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+### Linux ###
+*~
+.Trash-*
+
+### Gradle / Java (test harness build artifacts) ###
+test/.gradle/
+test/build/
+.gradle/
+build/

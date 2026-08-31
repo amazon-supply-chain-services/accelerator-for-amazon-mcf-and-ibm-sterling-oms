@@ -1,0 +1,27 @@
+Amazon Supply Chain Services - IBM Sterling OMS Accelerator Samples
+Copyright Amazon.com, Inc. or its affiliates. All Rights Reserved.
+
+This repository includes modified code from:
+
+Amazon Buy with Prime Accelerator for IBM Sterling OMS
+  - Source: https://perfaware.com/amazon-buy-with-prime-accelerator/
+  - License: Apache-2.0
+  - Copyright: Copyright (c) Perfaware / IBM
+  - Modifications: Enterprise/configuration identifiers generalized, MCF (Multi-Channel
+    Fulfillment) integration flows added via SP-API, security credentials removed
+    and replaced with placeholders.
+
+Test Harness
+  - The offline test harness under test/ is original Amazon work. It is provided for
+    experimental/development use only — to validate transformation logic before deploying to a
+    licensed IBM Sterling OMS runtime — and is not a substitute for a licensed IBM Sterling OMS
+    environment, which users are expected to obtain for production use. To compile and run the
+    production classes locally — without a licensed IBM Sterling OMS runtime and without any
+    Amazon connectivity — it provides minimal clean-room re-implementations of the third-party
+    API shapes the code imports (IBM Sterling types, the accelerator's own helper classes, and
+    Apache HttpComponents placeholders).
+  - Only the class/API names and method signatures are reproduced; the implementations are
+    entirely original Amazon work, backed by the standard JDK XML / JSON APIs. No IBM
+    Sterling-authored code, headers, or libraries are included or redistributed.
+  - The test harness depends only on JUnit (EPL-2.0), retrieved from Maven Central at build time,
+    and org.json (Apache-2.0) bundled in lib/.

@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Licensed Materials - Property of IBM
+IBM Sterling Selling and Fulfillment Suite
+(C) Copyright IBM Corp. 1001, 2013 All Rights Reserved.
+US Government Users Restricted Rights - Use, duplication or disclosure restricted by GSA ADP Schedule Contract with IBM Corp.
+-->
+<DBSchema>
+	<Entities>
+		<Entity ApiNeeded="Y" AuditRequired="Y" Description="Amazon container milestone" Prefix="AMZ" TableName="AMZ_CONN_CONTAINER_MILESTONES" XMLName="AmzConnContainerMilestones" HasHistory="N">
+			<Attributes>
+				<Attribute ColumnName="MILESTONE_KEY" DataType="Key" Description="Primary Key" Nullable="false" XMLName="MilestoneKey"/>
+				<Attribute XMLName="ShipmentContainerKey" ColumnName="SHIPMENT_CONTAINER_KEY" DataType="Text-50" Size="50" Type="NVARCHAR" Nullable="true" Description=""/>
+				<Attribute XMLName="StatusCode" ColumnName="STATUS_CODE" DataType="Text-50" Size="50" Type="NVARCHAR" Nullable="true" Description="Shipment Container Key"/>
+				<Attribute XMLName="Message" ColumnName="MESSAGE" DataType="Text-200" Type="NVARCHAR" Size="200" Nullable="true" Description="Milestone Status Message"/>
+				<Attribute XMLName="AmazonDeliveryId" ColumnName="AMAZON_DELIVERY_ID" DataType="Text-100" Type="NVARCHAR" Size="100" Nullable="true" Description="This field stores the Delivery ID."/>
+				<Attribute XMLName="Locale" ColumnName="LOCALE" DataType="Text-30" Type="NVARCHAR" Size="30" Nullable="true" Description="This field stores locale"/>
+				<Attribute XMLName="TrackingNo" ColumnName="TRACKING_NO" DataType="Text-100" Type="NVARCHAR" Size="100" Nullable="true" Description="This field is package tracking No"/>
+				<Attribute ColumnName="STATUS_TS" XMLName="StatusTs" DataType="TimeStamp" Description="Status TimeStamp" Nullable="true"/>
+				<Attribute ColumnName="CREATETS" DataType="TimeStamp" DefaultValue="sysdate" Description="Create TimeStamp"/>
+				<Attribute ColumnName="MODIFYTS" DataType="TimeStamp" DefaultValue="sysdate" Description="Modify TimeStamp"/>
+				<Attribute ColumnName="CREATEUSERID" DataType="UserId" DefaultValue="" Description="Creating User ID"/>
+				<Attribute ColumnName="MODIFYUSERID" DataType="UserId" DefaultValue="" Description="Modifying User ID"/>
+				<Attribute ColumnName="CREATEPROGID" DataType="ProgramID" DefaultValue="" Description="Creating Program ID"/>
+				<Attribute ColumnName="MODIFYPROGID" DataType="ProgramID" DefaultValue="" Description="Modifying Program ID"/>
+				<Attribute ColumnName="LOCKID" DataType="Lockid" DefaultValue="0" Description="Lock ID"/>
+			</Attributes>
+			<!-- PrimaryKey -->
+			<PrimaryKey Name="MILESTONE_PK">
+				<Attribute ColumnName="MILESTONE_KEY"/>
+			</PrimaryKey>
+			<Indices>
+				<Index Name="CONTAINER_MILESTONES_IDX1">
+					<Column Name="SHIPMENT_CONTAINER_KEY"/>
+					<Column Name="TRACKING_NO"/>
+					<Column Name="AMAZON_DELIVERY_ID"/>
+				</Index>
+				<Index Name="CONTAINER_MILESTONES_IDX2">
+					<Column Name="TRACKING_NO"/>
+					<Column Name="AMAZON_DELIVERY_ID"/>
+				</Index>
+			</Indices>
+		</Entity>
+		<Entity ApiNeeded="Y" AuditRequired="Y" Description="Amazon return events" Prefix="AMZ" TableName="AMZ_CONN_RETURN_EVENTS" XMLName="AmzConnReturnEvents" HasHistory="N">
+			<Attributes>
+				<Attribute ColumnName="RET_EVENTS_KEY" DataType="Key" Description="Primary Key" Nullable="false" XMLName="RetEventskey"/>
+				<Attribute XMLName="OrderNo" ColumnName="ORDER_NO" DataType="Text-50" Size="50" Type="NVARCHAR" Nullable="true" Description=""/>
+				<Attribute XMLName="EnterpriseCode" ColumnName="ENTERPRISE_CODE" DataType="Text-50" Size="50" Type="NVARCHAR" Nullable="true" Description=""/>
+				<Attribute XMLName="EventType" ColumnName="EVENT_TYPE" DataType="Text-200" Type="NVARCHAR" Size="200" Nullable="true" Description=""/>
+				<Attribute XMLName="EventID" ColumnName="EVENT_ID" DataType="Text-200" Type="NVARCHAR" Size="200" Nullable="true" Description=""/>
+				<Attribute XMLName="Resources" ColumnName="RESOURCES" DataType="Text-300" Type="NVARCHAR" Size="300" Nullable="true" Description=""/>
+				<Attribute ColumnName="CREATETS" DataType="TimeStamp" DefaultValue="sysdate" Description="Create TimeStamp"/>
+				<Attribute ColumnName="MODIFYTS" DataType="TimeStamp" DefaultValue="sysdate" Description="Modify TimeStamp"/>
+				<Attribute ColumnName="CREATEUSERID" DataType="UserId" DefaultValue="" Description="Creating User ID"/>
+				<Attribute ColumnName="MODIFYUSERID" DataType="UserId" DefaultValue="" Description="Modifying User ID"/>
+				<Attribute ColumnName="CREATEPROGID" DataType="ProgramID" DefaultValue="" Description="Creating Program ID"/>
+				<Attribute ColumnName="MODIFYPROGID" DataType="ProgramID" DefaultValue="" Description="Modifying Program ID"/>
+				<Attribute ColumnName="LOCKID" DataType="Lockid" DefaultValue="0" Description="Lock ID"/>
+			</Attributes>
+			<!-- PrimaryKey -->
+			<PrimaryKey Name="RET_EVENTS_PK">
+				<Attribute ColumnName="RET_EVENTS_KEY"/>
+			</PrimaryKey>
+		</Entity>	
+		<Entity ApiNeeded="Y" AuditRequired="Y" Description="Amazon return events" Prefix="AMZ" TableName="AMZ_CONN_EVENTS" XMLName="AmzConnEvents" HasHistory="N">
+			<Attributes>
+				<Attribute ColumnName="AMZCONN_EVENTS_KEY" DataType="Key" Description="Primary Key" Nullable="false" XMLName="AmzConnEventsKey"/>
+				<Attribute ColumnName="AMZCONN_EVENTS" DataType="CLOB" DefaultValue="" Nullable="true" XMLName="AmzConnEvents"/>
+				<Attribute ColumnName="ORDER_HEADER_KEY" DataType="Text-50" Size="50" Type="NVARCHAR" Nullable="true" Description="" XMLName="OrderHeaderKey"/>
+				<Attribute ColumnName="CREATETS" DataType="TimeStamp" DefaultValue="sysdate" Description="Create TimeStamp"/>
+				<Attribute ColumnName="MODIFYTS" DataType="TimeStamp" DefaultValue="sysdate" Description="Modify TimeStamp"/>
+				<Attribute ColumnName="CREATEUSERID" DataType="UserId" DefaultValue="" Description="Creating User ID"/>
+				<Attribute ColumnName="MODIFYUSERID" DataType="UserId" DefaultValue="" Description="Modifying User ID"/>
+				<Attribute ColumnName="CREATEPROGID" DataType="ProgramID" DefaultValue="" Description="Creating Program ID"/>
+				<Attribute ColumnName="MODIFYPROGID" DataType="ProgramID" DefaultValue="" Description="Modifying Program ID"/>
+				<Attribute ColumnName="LOCKID" DataType="Lockid" DefaultValue="0" Description="Lock ID"/>
+			</Attributes>
+			<!--  PrimaryKey  -->
+			<PrimaryKey Name="AMZ_EVENTS_PK">
+				<Attribute ColumnName="AMZCONN_EVENTS_KEY"/>
+			</PrimaryKey>
+		</Entity>
+	</Entities>
+</DBSchema>

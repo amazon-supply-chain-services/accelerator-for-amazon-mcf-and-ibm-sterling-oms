@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<OrderList>
+	<Order CustomerEMailID="" CustomerFirstName="" CustomerLastName="" DocumentType="" EnterpriseCode="" EntryType="" MaxOrderStatus="" MaxOrderStatusDesc="" MinOrderStatus="" MinOrderStatusDesc="" OrderDate="" OrderHeaderKey="" OrderNo="" OrderType="" OverallStatus="" PaymentStatus="" SellerOrganizationCode="" Status="">
+		<Extn ExtnOrderCountry="" ExtnAmazonReturnOrderId=""/>
+		<PriceInfo Currency=""/>
+		<OrderLines TotalNumberOfRecords="">
+			<OrderLine MaxLineStatus="" MaxLineStatusDesc="" MinLineStatus="" MinLineStatusDesc="" Qty="" OrderHeaderKey="" OrderLineKey="" OrderedQty="" OriginalOrderedQty="" PrimeLineNo="" RemainingQty="" ShipNode="" Status="" StatusQuantity="" SubLineNo="" FulfillmentType="" DerivedFromOrderHeaderKey="" DerivedFromOrderLineKey="" DerivedFromOrderReleaseKey="">
+				<Item ItemDesc="" ItemID="" ItemShortDesc="" ProductClass="" ProductLine=" " UnitCost="" UnitOfMeasure=""/>
+				<DerivedFromOrderLine PrimeLineNo="" SubLineNo="" OrderLineKey="">
+					<Extn/>
+				</DerivedFromOrderLine>
+				<DerivedFromOrder DocumentType="" EnterpriseCode="" OrderNo=""/>
+				<LinePriceInfo LineTotal="" UnitPrice=""/>
+				<LineOverallTotals Charges="" Discount="" ExtendedPrice="" LineTotal="" OptionPrice="" PricingQty="" Tax="" UnitPrice=""/>
+				<Extn />
+				<OrderStatuses>
+					<OrderStatus OrderHeaderKey="" OrderLineKey="" OrderLineScheduleKey="" OrderReleaseKey="" OrderReleaseStatusKey="" PipelineKey="" Status="" StatusDate="" StatusDescription="" StatusQty="" TotalQuantity="" ShipNode=""/>
+				</OrderStatuses>
+			</OrderLine>
+		</OrderLines>
+		<OverallTotals GrandCharges="" GrandDiscount="" GrandTax="" GrandTotal="" HdrCharges="" HdrDiscount="" HdrTax="" HdrTotal="" LineSubTotal=""/>
+		<OrderStatuses>
+			<OrderStatus OrderHeaderKey="" OrderLineKey="" OrderLineScheduleKey="" OrderReleaseKey="" OrderReleaseStatusKey="" PipelineKey="" Status="" StatusDate="" StatusDescription="" StatusQty="" TotalQuantity="" ShipNode=""/>
+		</OrderStatuses>
+	</Order>
+</OrderList>

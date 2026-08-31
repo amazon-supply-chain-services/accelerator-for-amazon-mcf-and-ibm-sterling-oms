@@ -1,0 +1,27 @@
+<log4jconfigdelta>
+	<category name="com.amazon.condition" class="com.yantra.yfc.log.YFCLogCategory" additivity="false">
+		<level class="com.yantra.yfc.log.YFCLogLevel" value="VERBOSE"/>
+		<appender-ref ref="CONSOLE"/>
+		<appender-ref ref="ALL"/>
+	</category>
+	<category name="com.amazon.integrator" class="com.yantra.yfc.log.YFCLogCategory" additivity="false">
+		<level class="com.yantra.yfc.log.YFCLogLevel" value="VERBOSE"/>
+		<appender-ref ref="CONSOLE"/>
+		<appender-ref ref="ALL"/>
+	</category>
+	<category name="com.amazon.oms" class="com.yantra.yfc.log.YFCLogCategory" additivity="false">
+		<level class="com.yantra.yfc.log.YFCLogLevel" value="VERBOSE"/>
+		<appender-ref ref="CONSOLE"/>
+		<appender-ref ref="ALL"/>
+	</category>
+	<category name="com.amazon.inventory" class="com.yantra.yfc.log.YFCLogCategory" additivity="false">
+		<level class="com.yantra.yfc.log.YFCLogLevel" value="VERBOSE"/>
+		<appender-ref ref="CONSOLE"/>
+		<appender-ref ref="ALL"/>
+	</category>
+	<category name="com.amazon.common" class="com.yantra.yfc.log.YFCLogCategory" additivity="false">
+		<level class="com.yantra.yfc.log.YFCLogLevel" value="VERBOSE"/>
+		<appender-ref ref="CONSOLE"/>
+		<appender-ref ref="ALL"/>
+	</category>
+</log4jconfigdelta>

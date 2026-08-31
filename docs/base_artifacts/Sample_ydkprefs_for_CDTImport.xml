@@ -1,0 +1,88 @@
+<preferences>
+    <configsynch>
+        <Settings ReportsDir="">
+            <AuditDeployment ValidateLockid="y" ValidateOldValues="y" ValidateRecordExistsBeforeDelete="y"/>
+        </Settings>
+        <SourceTargetPrefs>
+            <SourceTargetPrefs>
+                <SourceTargetPair SourceDatabase="DEFAULTXMLDB" TargetDatabase="SYSTEMDB">
+                    <Transformations>
+                    </Transformations>
+                    <Ignore>
+                        <Table Name="YFS_PIPELINE_CONDITION"/>
+                        <Table Name="YFS_USER_EXIT_IMPL"/>
+                        <Table Name="YFS_EVENT"/>
+                        <Table Name="YFS_EVENT_CONDITION"/>
+                        <Table Name="YFS_PAYMENT_CARD_TYPE"/>
+                        <Table Name="YFS_PAYMENT_RULE"/>
+                        <Table Name="YFS_PAYMENT_TYPE"/>
+                        <Table Name="YFS_USER"/>
+                        <Table Name="YFS_USER_GROUP_LIST"/>
+                        <Table Name="YFS_RESOURCE_PERMISSION"/>
+                        <Table Name="YFS_CATEGORY_ITEM"/>
+                        <Table Name="YFS_ITEM"/>
+                        <Table Name="YFS_ITEM_ALIAS"/>
+                        <Table Name="YFS_ITEM_ATTR_GROUP"/>
+                        <Table Name="YFS_ITEM_ATTR_GROUP_LOCALE"/>
+                        <Table Name="YFS_ITEM_ATTR_GROUP_TYPE"/>
+                        <Table Name="YFS_ITEM_ATTR_GRP_TYPE_LOCALE"/>
+                        <Table Name="YFS_ITEM_EXCLUSION"/>
+                        <Table Name="YFS_ITEM_INSTRUCTION"/>
+                        <Table Name="YFS_ITEM_INSTRUCTION_CODE"/>
+                        <Table Name="YFS_ITEM_LOCALE"/>
+                        <Table Name="YFS_ITEM_NODE_DEFN"/>
+                        <Table Name="YFS_ITEM_OPTION"/>
+                        <Table Name="YFS_ITEM_PRICE_SET"/>
+                        <Table Name="YFS_ITEM_PRICE_SET_DTL"/>
+                        <Table Name="YFS_ITEM_SERVICE_ASSC_SKILL"/>
+                        <Table Name="YFS_ITEM_SERVICE_ASSOC"/>
+                        <Table Name="YFS_ITEM_SERVICE_SKILL"/>
+                        <Table Name="YFS_ITEM_STATUS_RULES"/>
+                        <Table Name="YFS_ITEM_TAG"/>
+                        <Table Name="YFS_ITEM_UOM"/>
+                        <Table Name="YFS_KIT_ITEM"/>
+                        <Table Name="YFS_BASE_RULES"/>
+                    </Ignore>
+                    <AppendOnly>
+                        <Table Name="PLT_PROPERTY"/>
+                        <Table Name="PLT_PROPERTY_METADATA"/>
+                        <Table Name="YFS_ACTION"/>
+                        <Table Name="YFS_AGENT_CRITERIA"/>
+                        <Table Name="YFS_BASE_COMMON_CODE"/>
+                        <Table Name="YFS_CHARGE_NAME"/>
+                        <Table Name="YFS_COMMON_CODE"/>
+                        <Table Name="YFS_CONDITION"/>
+                        <Table Name="YFS_CONDITION_PROPS"/>
+                        <Table Name="YFS_ESP_TERMS"/>
+                        <Table Name="YFS_FLOW"/>
+                        <Table Name="YFS_GRAPH_UI"/>
+                        <Table Name="YFS_INVOKED_FLOWS"/>
+                        <Table Name="YFS_NODE_TYPE"/>
+                        <Table Name="YFS_ORGANIZATION"/>
+                        <Table Name="YFS_ORG_ENTERPRISE"/>
+                        <Table Name="YFS_PERSON_INFO"/>
+                        <Table Name="YFS_PIPELINE"/>
+                        <Table Name="YFS_PIPELINE_DEFINITION"/>
+                        <Table Name="YFS_PIPELINE_DROP_STS_COND"/>
+                        <Table Name="YFS_PIPELINE_LISTENER"/>
+                        <Table Name="YFS_PIPELINE_PICKUP_TRAN"/>
+                        <Table Name="YFS_QUEUE"/>
+                        <Table Name="YFS_RESOURCE"/>
+                        <Table Name="YFS_RESOURCE_PERMISSION"/>
+                        <Table Name="YFS_SERVER"/>
+                        <Table Name="YFS_SHIP_NODE"/>
+                        <Table Name="YFS_SOURCING_RULE_DTL"/>
+                        <Table Name="YFS_SOURCING_RULE_HDR"/>
+                        <Table Name="YFS_STATUS"/>
+                        <Table Name="YFS_SUB_FLOW"/>
+                        <Table Name="YFS_TRANSACTION "/>
+                        <Table Name="YFS_TRANSACTION_DROP_STATUS"/>
+                        <Table Name="YFS_TRANSACTION_PICKUP_STS"/>
+                    </AppendOnly>
+                    <RecordFilter>
+                    </RecordFilter>
+                </SourceTargetPair>
+            </SourceTargetPrefs>
+        </SourceTargetPrefs>
+    </configsynch>
+</preferences>

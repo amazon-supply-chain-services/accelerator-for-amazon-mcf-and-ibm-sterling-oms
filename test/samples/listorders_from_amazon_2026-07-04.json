@@ -1,0 +1,52 @@
+{
+  "_comment": "Test fixture — Amazon SP-API 2026-07-04 ListFulfillmentOrders response. Read by ListMCFOrders (converted to XML via PLTJSONUtils, 'orders' array extracted) and then reconciled by AmzReconcileMCFOrderSnapshot. One order, one line, one shipment/package. Sample (non-real) values.",
+  "orders": [
+    {
+      "orderId": "322-ZU58-6J6E5P",
+      "status": "PROCESSING",
+      "fulfillmentConfiguration": {
+        "serviceLevel": { "serviceTiers": ["STANDARD"] },
+        "action": "SHIP",
+        "policy": "FILL_ALL_AVAILABLE"
+      },
+      "receiveTime": "2026-08-21T18:30:00Z",
+      "statusUpdateTime": "2026-08-21T20:05:00Z",
+      "lineItems": [
+        {
+          "lineItemId": "202603151549159158697",
+          "amount": { "unit": "EACHES", "value": "2" },
+          "product": { "productIdentifier": { "amazonSku": "Deep_bwp_MCF_6" } },
+          "unfulfillableAmount": { "unit": "EACHES", "value": "0" },
+          "cancelledAmount": { "unit": "EACHES", "value": "1" }
+        }
+      ],
+      "shipments": [
+        {
+          "amazonShipmentId": "SHIP001",
+          "status": "SHIPPED",
+          "amazonFacility": { "facilityId": "PHX3" },
+          "items": [
+            {
+              "lineItemId": "202603151549159158697",
+              "amount": { "unit": "EACHES", "value": "1" },
+              "productIdentifier": { "amazonSku": "Deep_bwp_MCF_6" }
+            }
+          ],
+          "packages": [
+            {
+              "packageId": "PKG-abc123def456",
+              "status": "SHIPPED",
+              "tracking": {
+                "carrier": { "carrierCode": "ups", "trackingNumber": "1Z999AA1" },
+                "amazon": { "trackingNumber": "TBA001" },
+                "proofOfDelivery": { "deliveryPhotoUrl": "https://example.com/p.jpg", "receivedBy": "Jane Doe" },
+                "dropOffLocation": { "type": "FRONT_DOOR" }
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "pagination": { "nextToken": "" }
+}

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<OrderList>
+	<Order DocumentType="" EnterpriseCode="" EntryType="" MaxOrderStatus="" MaxOrderStatusDesc="" MinOrderStatus="" MinOrderStatusDesc="" OrderDate="" OrderHeaderKey="" OrderNo="" OrderType="" OverallStatus="" PaymentStatus="" SellerOrganizationCode="" Status="">
+		
+		<OrderLines TotalNumberOfRecords="">
+			<OrderLine MaxLineStatus="" MaxLineStatusDesc="" MinLineStatus="" MinLineStatusDesc="" Qty="" OrderHeaderKey="" OrderLineKey="" OrderedQty="" OriginalOrderedQty="" PrimeLineNo="" RemainingQty="" ShipNode="" Status="" StatusQuantity="" SubLineNo="" FulfillmentType="">
+				<Item ItemDesc="" ItemID="" ItemShortDesc="" ProductClass="" ProductLine=" " UnitCost="" UnitOfMeasure=""/>
+				<Extn ExtnAmazonDeliveryOfferId="" ExtnAmazonDelPreviewId="" ExtnAmazonLineItemAlias="" ExtnAmazonOrderId="" ExtnAmazonReturnEligible="" ExtnIsAmazonFulfillable="" ExtnIsPrimeEligible="" ExtnlwaAccessToken=""/>
+				</OrderLine>
+		</OrderLines>
+		</Order>
+</OrderList>
+

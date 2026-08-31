@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  OMS response fixture — getShipmentContainerList output, POPULATED (container already exists).
+  Sanitized capture of a real IBM Sterling OMS response. The milestone/package processor uses the
+  existing container (found by ExtnAmazonDeliveryId) to update package status/milestones.
+-->
+<Containers>
+    <Container ContainerNo="CN0001" ShipmentContainerKey="SCK0001" ShipmentKey="SK0001"
+        TrackingNo="123456789">
+        <Extn ExtnAmazonDeliveryId="SHIP901234"/>
+        <Shipment EnterpriseCode="DEFAULT" OrderHeaderKey="OH0001" OrderNo="Y100003115"
+            ShipmentKey="SK0001" ShipmentNo="SN0001"/>
+    </Container>
+</Containers>

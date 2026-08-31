@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Expected OMS confirmShipment request document that AmzProcessMCFShipmentEvent builds from
+  samples/recon_shipment_snapshot.json (reconciliation snapshot) + samples/oms/getOrderLineList_recon_output.xml (scripted
+  OMS response), with ship-node property amzConn.amazonShipNode.US = AMZ-US.
+
+  Header attributes (SellerOrganizationCode, OrderNo, OrderReleaseKey, DocumentType,
+  EnterpriseCode, ShipNode) come from the OMS getOrderLineList response; tracking / delivery id /
+  carrier come from the reconciliation-generated shipment event; quantity comes from the item amount.
+
+  The reconciliation shipment test compares the produced document to this reference semantically
+  (element/attribute values), so attribute ordering and whitespace do not matter.
+-->
+<Shipment SellerOrganizationCode="DEFAULT" OrderNo="Y100003115" OrderReleaseKey="OR0001"
+    DocumentType="0001" EnterpriseCode="DEFAULT" ShipNode="AMZ-US">
+    <Containers>
+        <Container TrackingNo="123456789">
+            <Extn ExtnAmazonDeliveryId="SHIP901234" ExtnCarrierCode="FEDEX"/>
+            <ContainerDetails>
+                <ContainerDetail Quantity="1.0">
+                    <ShipmentLine OrderNo="Y100003115" OrderReleaseKey="OR0001"
+                        OrderLineKey="OL0001" Quantity="1.0"/>
+                </ContainerDetail>
+            </ContainerDetails>
+        </Container>
+    </Containers>
+    <ShipmentLines>
+        <ShipmentLine OrderNo="Y100003115" OrderReleaseKey="OR0001" OrderLineKey="OL0001"
+            Quantity="1.0"/>
+    </ShipmentLines>
+</Shipment>

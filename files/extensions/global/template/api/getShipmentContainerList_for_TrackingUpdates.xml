@@ -1,0 +1,7 @@
+<Containers>
+	<Container TrackingNo="" ShipmentContainerKey="" ShipmentKey="" ContainerNo="">
+		<Extn ExtnAmazonTrackingURL="" ExtnAmazonDeliveryId=""/>
+		<Shipment ShipmentNo="" OrderNo="" ShipmentKey="" OrderHeaderKey="" EnterpriseCode=""/>
+	</Container>
+</Containers>
+

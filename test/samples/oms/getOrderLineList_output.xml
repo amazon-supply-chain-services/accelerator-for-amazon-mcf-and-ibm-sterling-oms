@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  OMS response fixture — getOrderLineList output.
+  A sanitized capture of a real IBM Sterling OMS getOrderLineList response for an MCF order line
+  in Released status (single release). Sample (non-real) IDs. Used by the deep shipment and
+  reconciliation tests as the scripted OMS response so the connector can build its confirmShipment
+  document offline.
+-->
+<OrderLineList LastOrderLineKey="OL0001" LastRecordSet="Y" ReadFromHistory="" TotalLineList="1">
+    <OrderLine FulfillmentType="Amazon MCF" OrderLineKey="OL0001" OrderedQty="1.00"
+        PrimeLineNo="1" ShipNode="AMZ-US" SubLineNo="1">
+        <Order DocumentType="0001" EnterpriseCode="DEFAULT" OrderHeaderKey="OH0001"
+            OrderNo="Y100003115" SellerOrganizationCode="DEFAULT">
+            <Extn ExtnOrderCountry="US"/>
+            <OrderLines>
+                <OrderLine FulfillmentType="Amazon MCF" MaxLineStatus="3200" MinLineStatus="3200"
+                    OrderHeaderKey="OH0001" OrderLineKey="OL0001" OrderedQty="1.00"
+                    PrimeLineNo="1" ShipNode="AMZ-US" Status="Released" SubLineNo="1">
+                    <Extn ExtnAmazonLineItemAlias="LI0001" ExtnIsAmazonFulfillable="Y"
+                        ExtnIsPrimeEligible="N"/>
+                    <Item ItemID="SKU123"/>
+                </OrderLine>
+            </OrderLines>
+        </Order>
+        <OrderStatuses>
+            <OrderStatus OrderLineKey="OL0001" OrderReleaseKey="OR0001" ShipNode="AMZ-US"
+                Status="3200" StatusDescription="Released" StatusQty="1.00"/>
+        </OrderStatuses>
+    </OrderLine>
+</OrderLineList>

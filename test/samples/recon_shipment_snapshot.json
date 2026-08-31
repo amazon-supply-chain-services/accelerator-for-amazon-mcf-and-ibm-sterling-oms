@@ -1,0 +1,23 @@
+{
+  "_comment": "Reconciliation snapshot in the 2026-07-04 Fulfillment Outbound order shape (the create/list API version, which is live). Drives the reconciliation agent's SHIPMENT branch: a shipped shipment/package with no cancelled quantity. With getShipmentContainerList scripted empty, the agent generates an INTERNAL shipment event (an internal representation used to invoke the processor) and the shipment processor builds the OMS confirmShipment request. Sample (non-real) values.",
+  "orders": [
+    {
+      "orderId": "322-ZU58-6J6E5P",
+      "status": "PROCESSING",
+      "fulfillmentConfiguration": { "serviceLevel": { "serviceTiers": ["STANDARD"] }, "action": "SHIP", "policy": "FILL_ALL_AVAILABLE" },
+      "lineItems": [
+        { "lineItemId": "202603151549159158697", "amount": { "unit": "EACHES", "value": "2" }, "product": { "productIdentifier": { "amazonSku": "Deep_bwp_MCF_6" } }, "unfulfillableAmount": { "unit": "EACHES", "value": "0" }, "cancelledAmount": { "unit": "EACHES", "value": "0" } }
+      ],
+      "shipments": [
+        {
+          "amazonShipmentId": "SHIP901234",
+          "status": "SHIPPED",
+          "amazonFacility": { "facilityId": "PHX3" },
+          "items": [ { "lineItemId": "202603151549159158697", "amount": { "unit": "EACHES", "value": "1.0" }, "productIdentifier": { "amazonSku": "Deep_bwp_MCF_6" } } ],
+          "packages": [ { "packageId": "PKG-abc123def456", "status": "SHIPPED", "tracking": { "carrier": { "carrierCode": "FEDEX", "trackingNumber": "123456789" }, "amazon": { "trackingNumber": "TBA001" } } } ]
+        }
+      ]
+    }
+  ],
+  "pagination": { "nextToken": "" }
+}

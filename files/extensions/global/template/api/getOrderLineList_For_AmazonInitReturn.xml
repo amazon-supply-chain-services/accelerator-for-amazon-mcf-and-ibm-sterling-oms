@@ -1,0 +1,16 @@
+<OrderLineList>
+	<OrderLine FulfillmentType="" OrderLineKey="" OrderedQty="" ReturnableQty="" ShipNode="" Status="" MinLineStatus="">
+		<Extn/>
+		<DerivedFromOrderLine PrimeLineNo="" SubLineNo="" OrderLineKey="">
+			<Extn/>
+		</DerivedFromOrderLine>
+		<DerivedFromOrder DocumentType="" EnterpriseCode="" OrderNo="">
+			<Extn/>
+		</DerivedFromOrder>
+		<Order DocumentType="" EnterpriseCode="" OrderHeaderKey="" OrderNo="" SellerOrganizationCode="" Status="">
+			<Extn ExtnOrderCountry=""/>
+			<PersonInfoBillTo AddressID="" AddressLine1="" City="" Country="" DayPhone="" EMailID="" FirstName="" LastName="" State="" ZipCode=""/>
+		</Order>
+		<ItemDetails ItemID=""/>
+	</OrderLine>
+</OrderLineList>

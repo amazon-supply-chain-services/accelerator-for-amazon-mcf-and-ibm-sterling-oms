@@ -1,0 +1,106 @@
+plugins {
+    id 'java'
+}
+
+/*
+ * Self-contained offline test harness for the MCF + IBM Sterling OMS accelerator.
+ *
+ * These tests run entirely offline:
+ *   - No IBM Sterling OMS runtime, no OMS database, no RFC/JMS connectivity
+ *   - No Amazon SP-API / MCF connectivity, no network
+ *
+ * Approach (mirrors the SAP ECC accelerator's offline harness):
+ *   The accelerator's transformation classes import a few IBM Sterling utility types
+ *   (SCXmlUtil, YFCObject, YFCLogCategory) that only exist inside a licensed IBM Sterling
+ *   OMS and are NOT redistributable. The harness provides tiny clean-room STUBS of just the
+ *   methods the accelerator uses (under test/stubs), so the REAL production transformation
+ *   code from ../src/main/java can be compiled and exercised directly against sample payloads.
+ *   Produced output is compared to fixtures in test/expected.
+ *
+ * Requires only a JDK (17+) and internet access the first time (Gradle downloads JUnit).
+ * Run with:  ./gradlew test
+ */
+
+repositories {
+    mavenCentral()
+}
+
+def repoRoot   = file('..')
+def mainSrc    = new File(repoRoot, 'src/main/java')
+def stubsSrc   = file('stubs')
+// org.json is already bundled with the accelerator for runtime use.
+def jsonJar    = new File(repoRoot, 'lib/java-json.jar')
+// commons-lang3 is bundled with the accelerator; the event processors use ExceptionUtils.
+def commonsLang3Jar = new File(repoRoot, 'lib/commons-lang3-3.1.jar')
+
+/*
+ * The specific PRODUCTION class(es) exercised offline. Only classes whose dependencies can be
+ * satisfied by the small stub set are included — the pure/near-pure transformation seams.
+ * Sterling-runtime-bound classes (which call live OMS APIs) are validated at their Sterling-free
+ * boundary in the test sources instead.
+ *
+ * Each named production file is copied (unmodified) into a generated source dir so ONLY that file
+ * is compiled — not its Sterling-coupled package siblings.
+ */
+def productionSources = [
+    // --- Flow 1: Create Fulfillment Order (OMS -> Amazon) ---
+    'com/amazon/integrator/order/api/MCFCreateFulfillmentOrderInAmazon.java',
+    'com/amazon/integrator/common/util/MCFPrepareSPAPICreateFulfillmentOrderRequest.java',
+    'com/amazon/oms/order/api/AmzUpdateOrdWithAmazonOrdInfo.java',
+    'com/amazon/oms/order/api/AmzUpdateOrderRelease.java',
+    // --- Flow 2: Native event processors (Amazon -> OMS, push) ---
+    'com/amazon/oms/delivery/api/AmzProcessMCFShipmentEvent.java',
+    'com/amazon/oms/tracking/api/AmzProcessMCFPackageStatusEvent.java',
+    'com/amazon/oms/delivery/api/AmzProcessMCFOrderStatusChangeEvent.java',
+    // --- Flow 3: Reconciliation / polling (Amazon -> OMS, pull) ---
+    'com/amazon/integrator/delivery/api/ListMCFOrders.java',
+    'com/amazon/oms/order/agent/AmzReconcileMCFOrderSnapshot.java',
+    'com/amazon/oms/order/agent/AmzMCFSnapshotPayloadBuilder.java',
+    // --- Shared production helpers used before the Sterling boundary ---
+    // Pure/near-pure: AmzLiterals & AmzCommonConstants are constant-only; the XRef util's single
+    // OMS call is intercepted by the stubbed AmzCommonUtil. Compiled (not stubbed) for exact values.
+    'com/amazon/common/util/AmzLiterals.java',
+    'com/amazon/common/util/AmzCommonConstants.java',
+    'com/amazon/common/util/AmzEnterpriseBPIDXRefUtil.java',
+]
+
+def genProdDir = layout.buildDirectory.dir('generated-production').get().asFile
+
+tasks.register('stageProductionSources', Copy) {
+    productionSources.each { rel ->
+        from(new File(mainSrc, rel)) {
+            into new File(rel).parent
+        }
+    }
+    into genProdDir
+}
+
+sourceSets {
+    test {
+        java {
+            srcDir 'stubs'
+            srcDir 'src/test/java'
+            srcDir genProdDir
+        }
+    }
+}
+
+dependencies {
+    testImplementation files(jsonJar)
+    testImplementation files(commonsLang3Jar)
+    testImplementation platform('org.junit:junit-bom:5.10.2')
+    testImplementation 'org.junit.jupiter:junit-jupiter'
+    testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
+}
+
+compileTestJava.dependsOn 'stageProductionSources'
+
+test {
+    useJUnitPlatform()
+    systemProperty 'samples.dir',  new File(projectDir, 'samples').absolutePath
+    systemProperty 'expected.dir', new File(projectDir, 'expected').absolutePath
+    testLogging {
+        events 'passed', 'skipped', 'failed'
+        showStandardStreams = true
+    }
+}

@@ -1,0 +1,25 @@
+Para 5 | image1.png | after: 
+Para 15 | image2.png | after: 
+Para 20 | image3.png | after: 
+
+drag and drop one more api component, connect condition to
+Para 25 | image4.png | after: 
+Para 42 | image5.png | after: 
+Para 50 | image6.png | after: 
+Para 51 | image7.png | after: 
+Para 64 | image8.png | after: 
+Para 71 | image9.png | after: 
+Para 74 | image10.png | after: Under Server tab, create the server AmzConnProcessOrderCance
+Para 79 | image11.png | after: 
+Para 84 | image12.png | after: 
+Para 94 | image13.png | after: Drag and drop the api component, select the extended databas
+Para 106 | image14.png | after: Drag and drop the api component, select the extended databas
+Para 118 | image15.png | after: Drag and drop the api component, select the extended databas
+Para 132 | image16.png | after: Flow name: AmzProcessReleaseCreationOrChangeMsg
+Para 141 | image17.png | after: Remove the AmzConnOrderCancelRequest flow and add the AmzCon
+Para 149 | image18.png | after: Disable the Release Order On Success event or remove the Amz
+Para 152 | image19.png | after: 
+Para 154 | image20.png | after: 
+Para 162 | image21.png | after: Open Release Order Transaction, under Events Enable the ON_R
+Para 168 | image22.png | after: Drag and drop the Amz Order Cancel Action into the Change Or
+Para 179 | image23.png | after: 
